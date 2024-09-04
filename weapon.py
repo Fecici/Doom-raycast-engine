@@ -1,7 +1,7 @@
 from sprite_object import *
 
 class Weapon(AnimatedSprite):
-    def __init__(self, game, path=r"random_projects/raycast attempt 2/resources/sprites/weapon/shotgun/0.png",
+    def __init__(self, game, path="resources/sprites/weapon/shotgun/0.png",
                   scale=0.4,
                   animation_time=90) -> None:
         super().__init__(game=game, path=path, pos=(0, 0), scale=scale, animation_time=animation_time)
