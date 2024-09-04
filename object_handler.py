@@ -9,10 +9,9 @@ class ObjectHandler:
 
         self.npc_positions = {}
 
-        # these are my relative paths for vscode
-        self.npc_path = "random_projects/raycast attempt 2/resources/sprites/npc/"
-        self.static_sprite_path = 'random_projects/raycast attempt 2/resources/sprites/static_sprites/'
-        self.animated_sprite_path = 'random_projects/raycast attempt 2/resources/sprites/animated_sprites/'
+        self.npc_path = "resources/sprites/npc/"
+        self.static_sprite_path = 'resources/sprites/static_sprites/'
+        self.animated_sprite_path = 'resources/sprites/animated_sprites/'
 
         self.load_sprites()
         self.load_npcs()
@@ -27,7 +26,6 @@ class ObjectHandler:
 
     def load_npcs(self):
         self.npcs = [
-            # NPC(self.game, f'{self.npc_path}soldier/0.png', (9.5, 3.5), scale=0.8, shift=0.15),
             NPC(self.game, f'{self.npc_path}soldier/0.png', (6.5, 6.5), scale=0.8, shift=0.15),
             NPC(self.game, f'{self.npc_path}soldier/0.png', (13, 10), scale=0.8, shift=0.15),
             NPC(self.game, f'{self.npc_path}soldier/0.png', (14, 10), scale=0.8, shift=0.15),
