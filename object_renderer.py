@@ -7,19 +7,19 @@ class ObjectRenderer:
         self.screen = game.screen
 
         self.wall_textures = self.load_wall_textures()
-        self.skybox = self.get_texture('random_projects/raycast attempt 2/resources/textures/sky.png', (WWIDTH, HALF_WHEIGHT))
+        self.skybox = self.get_texture('resources/textures/sky.png', (WWIDTH, HALF_WHEIGHT))
     
         self.sky_offset = 0
-        self.blood_screen = self.get_texture("random_projects/raycast attempt 2/resources/textures/blood_screen.png", res=RES)
+        self.blood_screen = self.get_texture("resources/textures/blood_screen.png", res=RES)
 
         self.digit_size = 90
-        self.digit_images = [self.get_texture(f"random_projects/raycast attempt 2/resources/textures/digits/{i}.png", [self.digit_size] * 2)
+        self.digit_images = [self.get_texture(f"resources/textures/digits/{i}.png", [self.digit_size] * 2)
                                               for i in range(11)]
         
         # maps the digits to an image in a dict
         self.digits = dict(zip(map(str, range(11)), self.digit_images))
 
-        self.death_screen = self.get_texture("random_projects/raycast attempt 2/resources/textures/game_over.png", res=RES)
+        self.death_screen = self.get_texture("resources/textures/game_over.png", res=RES)
 
     def draw(self):
         self.draw_background()
@@ -62,9 +62,9 @@ class ObjectRenderer:
 
     def load_wall_textures(self):
         return {
-            1: self.get_texture('random_projects/raycast attempt 2/resources/textures/1.png'),
-            2: self.get_texture('random_projects/raycast attempt 2/resources/textures/2.png'),
-            3: self.get_texture('random_projects/raycast attempt 2/resources/textures/3.png'),
-            4: self.get_texture('random_projects/raycast attempt 2/resources/textures/4.png'),
-            5: self.get_texture('random_projects/raycast attempt 2/resources/textures/5.png')
+            1: self.get_texture('resources/textures/1.png'),
+            2: self.get_texture('resources/textures/2.png'),
+            3: self.get_texture('resources/textures/3.png'),
+            4: self.get_texture('resources/textures/4.png'),
+            5: self.get_texture('resources/textures/5.png')
         }
