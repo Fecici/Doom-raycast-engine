@@ -22,9 +22,9 @@ class Sprite:
         self.SPRITE_HEIGHT_SHIFT = shift
 
     def debug_sprites(self):
-        """
-        i can easily add delta time to this later if i want
-        """
+
+        # can also add delta time for this to properly work
+        
         keys = pygame.key.get_pressed()
         if not keys[pygame.K_LSHIFT]:
             if keys[pygame.K_DOWN]:
@@ -44,11 +44,12 @@ class Sprite:
             if keys[pygame.K_DOWN]:
                 self.y += 0.01
             print(f'New map pos: {self.x, self.y}')
+       
 
     def get_sprite_projection(self):
 
         # debug and map editor stuff
-        self.debug_sprites()
+        # self.debug_sprites()
 
         # since sprite initially has different aspect ratio, it must be scaled to get the correct projection siza
         projection = SCREEN_DISTANCE / self.norm_dist * self.SPRITE_SCALE # ration between the screen distance and the normalized player-to-sprite distance
