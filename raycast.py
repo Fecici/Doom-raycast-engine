@@ -112,6 +112,8 @@ class Raycast:
             # projection
             projection_height = SCREEN_DISTANCE / (depth + 0.00001)  # depth >= 0, so this makes it > 0 (avoid division by 0)
             self.raycast_results.append((depth, projection_height, texture, offset))  # add to the render queue
+
+            # uncomment these if you dont want textures. Youll also need to comment out some calls in the Game.draw() method
             # depth_color = [69 / (1 + depth ** 5 * 0.00008)] * 3  # this scaling gives a minimum of ~ 255 / 65 and a maximum of 255
             # pygame.draw.rect(self.game.screen, depth_color, (ray * SCALE, HALF_WHEIGHT - projection_height // 2, SCALE, projection_height))
             ray_angle += DELTA_ANGLE  # increment to the next angle
