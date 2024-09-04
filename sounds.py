@@ -4,7 +4,7 @@ class Sound:
     def __init__(self, game) -> None:
         self.game = game
         pygame.mixer.init()
-        self.path = 'random_projects/raycast attempt 2/resources/sound/'
+        self.path = 'resources/sound/'
         self.shotgun_sound = pygame.mixer.Sound(f'{self.path}shotgun.wav')
         self.npc_pain = pygame.mixer.Sound(f'{self.path}npc_pain.wav')
         self.npc_death = pygame.mixer.Sound(f'{self.path}npc_death.wav')
